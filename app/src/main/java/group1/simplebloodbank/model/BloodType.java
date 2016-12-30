@@ -1,5 +1,6 @@
 package group1.simplebloodbank.model;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class BloodType {
