@@ -1,8 +1,12 @@
 package group1.simplebloodbank.network;
 
-/**
- * Created by abshirahmed on 29/12/2016.
- */
 
-public class BloodBankApi {
+import group1.simplebloodbank.model.BloodBankWrapper;
+import retrofit2.Call;
+import retrofit2.http.GET;
+
+interface BloodBankApi {
+
+    @GET("bloodbank")
+    Call<BloodBankWrapper> getBloodBanks;
 }

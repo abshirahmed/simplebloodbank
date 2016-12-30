@@ -5,20 +5,52 @@ import com.google.gson.annotations.SerializedName;
 public class BloodType {
 
     @SerializedName("o_positive")
-    public int oPositive;
+    private int oPositive;
     @SerializedName("o_negative")
-    public int oNegative;
+    private int oNegative;
     @SerializedName("a_positive")
-    public int aPositive;
+    private int aPositive;
     @SerializedName("a_negative")
-    public int aNegative;
+    private int aNegative;
     @SerializedName("b_positive")
-    public int bPositive;
+    private int bPositive;
     @SerializedName("b_negative")
-    public int bNegative;
+    private int bNegative;
     @SerializedName("ab_positive")
-    public int abPositive;
+    private int abPositive;
     @SerializedName("ab_negative")
-    public int abNegative;
+    private int abNegative;
+
+    public int getoPositive() {
+        return oPositive;
+    }
+
+    public int getoNegative() {
+        return oNegative;
+    }
+
+    public int getaPositive() {
+        return aPositive;
+    }
+
+    public int getaNegative() {
+        return aNegative;
+    }
+
+    public int getbPositive() {
+        return bPositive;
+    }
+
+    public int getbNegative() {
+        return bNegative;
+    }
+
+    public int getAbPositive() {
+        return abPositive;
+    }
+
+    public int getAbNegative() {
+        return abNegative;
+    }
 
 }
