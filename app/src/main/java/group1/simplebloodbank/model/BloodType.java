@@ -53,4 +53,17 @@ public class BloodType {
         return abNegative;
     }
 
+    @Override
+    public String toString() {
+        return "BloodType{" +
+                "oPositive=" + oPositive +
+                ", oNegative=" + oNegative +
+                ", aPositive=" + aPositive +
+                ", aNegative=" + aNegative +
+                ", bPositive=" + bPositive +
+                ", bNegative=" + bNegative +
+                ", abPositive=" + abPositive +
+                ", abNegative=" + abNegative +
+                '}';
+    }
 }

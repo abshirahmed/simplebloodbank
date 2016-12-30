@@ -8,5 +8,6 @@ import retrofit2.http.GET;
 interface BloodBankApi {
 
     @GET("bloodbank")
-    Call<BloodBankWrapper> getBloodBanks;
+    Call<BloodBankWrapper> getBloodBanks();
+
 }

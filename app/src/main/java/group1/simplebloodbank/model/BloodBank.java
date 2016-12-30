@@ -9,24 +9,25 @@ public class BloodBank {
     private float longitude;
     private BloodType bloodType;
 
-    public String getName() {
-        return name;
-    }
+    //assigning getters to return required fields
+    public String getName() { return name; }
 
-    public String getPostcode() {
-        return postcode;
-    }
+    public String getPostcode() { return postcode;}
 
-    public float getLatitude() {
-        return latitude;
-    }
+    public float getLatitude() { return latitude; }
 
-    public float getLongitude() {
-        return longitude;
-    }
+    public float getLongitude() { return longitude; }
 
-    public BloodType getBloodType() {
-        return bloodType;
-    }
+    public BloodType getBloodType() { return bloodType; }
 
+    @Override
+    public String toString() {
+        return "BloodBank{" +
+                "name='" + name + '\'' +
+                ", postcode='" + postcode + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", bloodType=" + bloodType +
+                '}';
+    }
 }
