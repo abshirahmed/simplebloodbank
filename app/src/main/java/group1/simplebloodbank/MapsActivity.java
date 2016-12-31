@@ -20,20 +20,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private List<BloodBank> mBloodBanks;
+    private NetworkManager mNetworkManager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        mNetworkManager =  new NetworkManager();
+        mNetworkManager.setListener(this);
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-        NetworkManager networkManager =  new NetworkManager();
-        networkManager.setListener(this);
-        networkManager.requestBloodBanks();
     }
 
 
@@ -46,9 +47,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mNetworkManager.requestBloodBanks();
     }
 
     @Override
